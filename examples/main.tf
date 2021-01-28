@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 module "rg" {
-  source = "../../modules/resource_group"
+  source = "../"
 
   naming_suffix = [
     "example"
