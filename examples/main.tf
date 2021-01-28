@@ -2,10 +2,14 @@ provider "azurerm" {
   features {}
 }
 
+resource "random_id" "rg_name" {
+  byte_length = 8
+}
+
 module "rg" {
   source = "../"
 
-  name     = "example"
+  name     = "example-${random_id.rg_name.hex}-rg"
   location = "northeurope"
 }
 
