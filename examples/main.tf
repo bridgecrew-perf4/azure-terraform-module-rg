@@ -5,12 +5,10 @@ provider "azurerm" {
 module "rg" {
   source = "../"
 
-  naming_suffix = [
-    "example"
-  ]
+  name     = "example"
   location = "northeurope"
 }
 
 output "rg_name" {
-  value = module.rg.rg_name
+  value = module.rg.name
 }

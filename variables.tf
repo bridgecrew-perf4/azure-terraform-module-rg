@@ -5,7 +5,7 @@ variable "location" {
 
 variable "name" {
   description = "The name (should follow consistent naming convention) which will be used for the name generation of this Resource Group. Changing this forces a new Resource Group to be created."
-  type        = list(string)
+  type        = string
 }
 
 variable "tags" {
